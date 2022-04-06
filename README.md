@@ -2,7 +2,7 @@
 
 Project version (04.06.2022)
 <p align="center">
- <img style="width:800px;" src="https://github.com/aleksei-stsigartsov/local_storage/blob/master/evenly.png" />
+ <img style="width:1000px;" src="https://github.com/aleksei-stsigartsov/local_storage/blob/master/evenly.png" />
 </p>
 
 <br><br>
