@@ -1,8 +1,11 @@
 # Getting Started with Create React App
 
 Project version (04.06.2022)
+<p align="center">
+ <img style="width:800px;" src="https://github.com/aleksei-stsigartsov/local_storage/blob/master/evenly.png" />
+</p>
 
-
+<br><br>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
