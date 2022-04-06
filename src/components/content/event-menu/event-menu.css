@@ -1,0 +1,141 @@
+:root {
+    --panel-btn-color: #222429;
+}
+
+body.light-theme {
+    --panel-btn-color: #e7e7e7;
+}
+
+.events-panel-box {
+    background-color: var(--primary-background-color);
+    transition-property: transform, opacity;
+    transition-duration: .25s;
+    transition-timing-function: cubic-bezier(0, 0, .2, 1);
+    z-index: 99;
+}
+
+.events-panel-container {
+    position: absolute;
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.events-panel-box.collapsed {
+    box-shadow: none;
+}
+
+.events-search-spacer {
+    flex: none;
+    height: 70px;
+}
+
+.events-container {
+    scrollbar-width: thin;
+    display: flex;
+    gap: .5rem;
+    z-index: 1;
+    
+}
+
+.toggle-panel-box {
+    position: absolute;
+    z-index: 1;
+}
+
+
+
+@media (min-width: 1081px) {
+    :root {
+        --panel-size: 38rem;
+    }
+
+    .events-panel-box {
+        top: 0;
+        height: 100%;
+        width: var(--panel-size);
+        transform: translateX(0);
+    }
+
+    .events-panel-box.collapsed {
+        transform: translateX(
+            calc(0px - var(--panel-size))
+        );
+    }
+
+    .events-panel-container {
+        flex-direction: column;
+
+    }
+
+    .events-container {
+        overflow-y: auto;
+        flex-direction: column;
+        padding: 0 .5rem .5rem .5rem;
+        scrollbar-width: thin;
+    }
+
+    .toggle-panel-box {
+        top: calc(50% - 2.5rem);
+        left: var(--panel-size);
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+      }
+        ::-webkit-scrollbar-track {
+        background: var(--primary-background-color); 
+        border-radius: 10px;
+    
+      }
+    
+      ::-webkit-scrollbar-thumb {
+        background: var(--scrollbar-thumb-color);
+        border-radius: 10px; 
+      }
+    
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--scrollbar-thumb-hover-color); 
+      }
+
+}
+
+@media (max-width: 1080px) {
+    :root {
+        --panel-size: 20rem;
+    }
+
+    .events-panel-box {
+        bottom: 0;
+        height: var(--panel-size);
+        width: 100%;
+        transform: translateY(0);
+    }
+
+    .events-panel-box.collapsed {
+        transform: translateY(var(--panel-size));
+    }
+
+    .events-panel-container {
+        flex-direction: row;
+        scrollbar-width: thin;
+    }
+
+    .events-search-spacer {
+        display: none;
+    }
+
+    .events-container {
+        overflow-x: auto;
+        padding: .5rem .5rem 0 .5rem;
+    }
+
+    .toggle-panel-box {
+        left: calc(50% - 2.5rem);
+        bottom: var(--panel-size);
+    }
+
+    
+
+}
